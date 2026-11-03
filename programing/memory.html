@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="ja" />
+    <title>Ichipedia</title>
+    <h1 class="">メモリについて</h1>
+    <h2>ヒープとスタック</h2>
+    <h3>スタック</h3>
+    <p>LIFO(Last In First Out)になっている。つまり、洗濯物と同じ。</p>
+    <h3>逆ポーランド記法</h3>
+    <p>12+ のように書く計算法。スタックになっている。</p>
+    <h3>関数とスタック</h3>
+    <p>以下のプログラムを考える</p>
+    <pre>
+    <code>
+      void funcB () {
+      int b1, b2;
+
+      b1 = 200;
+      b2 = 300;
+
+      printf("funcB:b1=%d, b2=%d\n" , b1,b2);
+      }
+
+      void funcA () {
+      int a1;
+
+      a1 = 100;
+
+      funcB();
+
+      printf("funcA:a1=%d\n", a1);
+      }
+
+      void main() {
+      funcA();
+      }
+    </code>
+  </pre>
+  </head>
+</html>
